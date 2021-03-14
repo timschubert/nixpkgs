@@ -7073,6 +7073,8 @@ in {
 
   recaptcha_client = callPackage ../development/python-modules/recaptcha_client { };
 
+  recipemd = callPackage ../development/python-modules/recipemd { };
+
   recommonmark = callPackage ../development/python-modules/recommonmark { };
 
   redbaron = callPackage ../development/python-modules/redbaron { };

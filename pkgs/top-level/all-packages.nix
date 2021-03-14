@@ -7440,6 +7440,8 @@ in
     inherit (darwin.apple_sdk.frameworks) Security;
   };
 
+  recipemd = with python3Packages; toPythonApplication recipemd;
+
   remarshal = callPackage ../development/tools/remarshal { };
 
   rehex = callPackage ../applications/editors/rehex { };
