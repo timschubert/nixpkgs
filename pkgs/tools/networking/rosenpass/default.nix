@@ -25,17 +25,15 @@ in
 rustPlatform.buildRustPackage rec {
   # metadata and source
   pname = "rosenpass";
-  version = "0.1.1";
+  version = "dev/liboqs-fix-debug";
   src = fetchFromGitHub {
-    owner = pname;
+    owner = "dadada";
     repo = pname;
-    rev = "v${version}";
-    sha256 = "sha256-KU/FfiaDqtAxg6/66PrI1zJ3SZBnnVUYOlc24WYJNLY=";
+    rev = "${version}";
+    sha256 = "sha256-SkgF9bxMUKvBUgsVgkAyddK06Xk/5d30B4qI2VMnnX8=";
   };
 
-  cargoLock = {
-    lockFile = src + "/Cargo.lock";
-  };
+  cargoHash = "sha256-eP7PwtYfcoH5oVHANUFz3zK/3AWwvDIB3JT5VhOz7AY=";
 
   nativeBuildInputs = [
     cmake # for oqs build in the oqs-sys crate
